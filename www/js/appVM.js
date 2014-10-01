@@ -207,6 +207,12 @@ window.__MESSAGE_VM__ = function() {
   var lurkerUpdate = function(lurkers) {
     //get count of current users in room
     _LURKERS = lurkers.lurker_count;
+    var html_string = _LURKERS + ' watchers';
+    if(_LURKERS == 1 ){
+      html_string = 'forever alone' ;
+    }
+
+    $$('#luker_count').text(html_string);
   }
 
 
